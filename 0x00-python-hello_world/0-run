@@ -1,3 +1,2 @@
 #!/bin/bash
-export $PYFILE=0-run
-
+export $PYFILE = 0-run
