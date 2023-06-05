@@ -1,0 +1,3 @@
+#!/bin/bash
+export $PYFILE=0-run
+h
