@@ -1,2 +1,3 @@
 #!/bin/bash
+# Script to deploy Couchbase Cluster
 python3 -m compileall -b "$PYFILE" > "${PYFILE}c"
