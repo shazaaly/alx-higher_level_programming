@@ -1,2 +1,2 @@
-0x01. Python - if/else, loops, function
-s
+0x01. Python - if/else, loops, functions
+
