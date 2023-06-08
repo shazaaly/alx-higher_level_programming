@@ -6,7 +6,7 @@ if args == 1:
     print("1: ", sys.argv[1])
 elif args > 1:
     print("{} arguments:".format(len(sys.argv)))
-    for i in range(args - 1):
+    for i in range(args):
         print("{:d}:{:s}".format(i + 1, sys.argv[i]))
 
 else:
