@@ -14,6 +14,10 @@ int is_palindrome(listint_t **head)
 	int i = 0;
 	int j = 0;
 
+	if (*head == NULL)
+	{
+		return (0);
+	}
 	while (current != NULL)
 	{
 		arr[i++] = current->n;
