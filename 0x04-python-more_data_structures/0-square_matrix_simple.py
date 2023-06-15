@@ -1,8 +1,4 @@
 def square_matrix_simple(matrix=[]):
-    if not matrix:
-        return
-    my_martix = []
-    for rows in matrix:
-        my_martix.append(list(map(lambda x: x**2, rows)))
-
-    return (my_martix)
+    new_matrix = [[i**2 for i in row] for row in matrix]
+    return new_matrix
+ 
