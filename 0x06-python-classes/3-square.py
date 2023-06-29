@@ -25,4 +25,4 @@ class Square:
     @property
     def area(self):
         """A public instance method to calculate area of square"""
-        return self.__size * self.__size
+        return self.__size * 2
