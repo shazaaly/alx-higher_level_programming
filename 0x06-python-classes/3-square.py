@@ -22,7 +22,6 @@ class Square:
         else:
             self.__size = __size
 
-    @property
     def area(self):
         """A public instance method to calculate area of square
         Returns : square area"""
