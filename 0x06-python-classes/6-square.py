@@ -9,13 +9,13 @@ class Square:
     __size : private
     """
 
-    def __init__(self, position=(0, 0), __size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Intializing the square object with a private size attribute
         Args :
         __size : size of squre
         """
         self.position = position
-        self.__size = __size
+        self.size = size
         if not isinstance(self.__size, int):
             raise TypeError("size must be an integer")
         elif self.__size < 0:
