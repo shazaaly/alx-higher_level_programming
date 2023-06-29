@@ -14,7 +14,7 @@ class Square:
         Args :
         __size : size of squre
         """
-
+        self.__size = __size
         if not isinstance(self.__size, int):
             raise TypeError("0x06. Python - Classes and Objects")
         elif self.__size < 0:
