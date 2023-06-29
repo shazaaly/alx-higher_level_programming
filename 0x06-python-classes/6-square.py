@@ -9,12 +9,12 @@ class Square:
     __size : private
     """
 
-    def __init__(self, __position=(0, 0), __size=0):
+    def __init__(self, position=(0, 0), __size=0):
         """Intializing the square object with a private size attribute
         Args :
         __size : size of squre
         """
-        self.__position = __position
+        self.position = position
         self.__size = __size
         if not isinstance(self.__size, int):
             raise TypeError("size must be an integer")
@@ -39,31 +39,12 @@ class Square:
         Args : value
         Raises: Type
         error or value error"""
-        if not isinstance(value, tuple):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
-
-    def my_print(self):
-        """prints in stdout the square with the character #
-        """
-        if self.__size == 0:
-            print()
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
         else:
-            for j in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                for k in range(self.__position[0]):
-                    print(" ",  end="")
-                print("#" * (self.__size))
-
-
-
+            self.__size = value
 
     @property
     def position(self):
@@ -80,3 +61,16 @@ class Square:
                 not all(isinstance(v, int) and v >= 0 for v in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+    def my_print(self):
+        """prints in stdout the square with the character #
+        """
+        if self.__size == 0:
+            print()
+        else:
+            for j in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for k in range(self.__position[0]):
+                    print(" ",  end="")
+                print("#" * (self.__size))
