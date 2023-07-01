@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Defines a summation function."""
+
+
 def add_integer(a, b=98):
     """
     Args: a, b
@@ -14,7 +17,3 @@ def add_integer(a, b=98):
     if not isinstance(b, int):
         raise TypeError("b must be an integer or float")
     return a + b
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
