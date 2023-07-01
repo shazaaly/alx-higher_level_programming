@@ -8,8 +8,7 @@ def matrix_divided(matrix, div):
      Args: matrix and a div: number to be divide on or none
      Returns : a new matrix, elements rounded to 2 decimal places or matrix if div == None
     """
-    if div is None:
-        return matrix
+
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
