@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-"""Defines a summation function."""
+"""
+This is the 0-add_integer module.
+It contains a function for adding two integers or floats.
+
+"""
 
 
 def add_integer(a, b=98):
+    """Args: a,b two floats or integers
+       Return an integer: sum of 2 numbers
     """
-    Args: a, b
-    Return an integer: sum of 2 numbers
-    """
-    # Cast a and b to integers if they are floats
     if isinstance(a, float):
         a = int(a)
     if isinstance(b, float):
