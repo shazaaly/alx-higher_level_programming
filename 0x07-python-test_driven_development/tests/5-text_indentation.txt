@@ -22,18 +22,16 @@ Hello
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    >>> text_indentation("    let's begin.    This is the start.   ")
-    let's begin.
-    <BLANKLINE>
-    This is the start.
+	>>> text_indentation("    Shaza Ali.    This is my name.   ")
+	Shaza Ali.
+	<BLANKLINE>
+	This is my name.
 	<BLANKLINE>
 
->>> text_indentation("my name is Shaza:\nHello.")
-my name is Shaza:
-<BLANKLINE>
-<BLANKLINE>
-Hello.
-<BLANKLINE>
+    >>> text_indentation("A very \n new line.")
+    A very
+    new line.
+    <BLANKLINE>
 
 
 
