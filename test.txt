@@ -1,0 +1,7 @@
+    words = text.split()
+    text = " ".join(words)
+
+    text = text.replace('.', ".\n\n")
+    text = text.replace('?', "?\n\n")
+    text = text.replace(':', ":\n\n")
+    text = text.strip()

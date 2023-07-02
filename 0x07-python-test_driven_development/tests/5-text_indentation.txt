@@ -1,8 +1,9 @@
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("Hello")
-Hello
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
 
 >>> text_indentation("    Hello")
 Hello
@@ -25,7 +26,14 @@ Hello
     let's begin.
     <BLANKLINE>
     This is the start.
-    <BLANKLINE>
+	<BLANKLINE>
+
+>>> text_indentation("my name is Shaza:\nHello.")
+my name is Shaza:
+<BLANKLINE>
+<BLANKLINE>
+Hello.
+<BLANKLINE>
 
 
 
