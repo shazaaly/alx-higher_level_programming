@@ -14,3 +14,4 @@ class TestMax(unittest.TestCase):
         expected_max = 6
         actual_max = max_integer(list)
         self.assertEqual(actual_max, expected_max)
+        self.assertIsNotNone(max_integer(list))
