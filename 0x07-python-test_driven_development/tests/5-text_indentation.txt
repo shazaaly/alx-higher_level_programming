@@ -22,11 +22,12 @@ Hello
     Traceback (most recent call last):
     TypeError: text must be a string
 
-	>>> text_indentation("    Shaza Ali.    This is my name.   ")
-	Shaza Ali.
-	<BLANKLINE>
-	This is my name.
-	<BLANKLINE>
+>>> text_indentation("    Shaza Ali.    This is my name.   ")
+Shaza Ali.
+<BLANKLINE>
+This is my name.
+<BLANKLINE>
+<BLANKLINE>
 
     >>> text_indentation("A very \n new line.")
     A very
