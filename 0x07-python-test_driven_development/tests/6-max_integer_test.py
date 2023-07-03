@@ -33,3 +33,7 @@ class TestMax(unittest.TestCase):
         actual_max = max_integer(list4)
         self.assertEqual(actual_max, expected_max)
         self.assertIsNotNone(max_integer(list4))
+
+        list5 = ["ALX", -5, -10, 0, 0]
+        with self.assertRaises(TypeError):
+            max_integer(list5)
