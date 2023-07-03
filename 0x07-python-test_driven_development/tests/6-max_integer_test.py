@@ -27,3 +27,9 @@ class TestMax(unittest.TestCase):
         actual_max = max_integer(list3)
         self.assertEqual(actual_max, expected_max)
         self.assertIsNotNone(max_integer(list3))
+
+        list4 = [-10, -5, -10, 0, 0]
+        expected_max = 0
+        actual_max = max_integer(list4)
+        self.assertEqual(actual_max, expected_max)
+        self.assertIsNotNone(max_integer(list4))
