@@ -9,25 +9,25 @@ class Rectangle:
         width (int): The width of the rectangle.
         height (int): The height of the rectangle.
     """
-    def __init__(self, __width=0, __height=0):
+    def __init__(self, width=0, height=0):
         """Initializes a new Rectangle object.
 
         Args:
             width (int, optional): The width of the rectangle. Defaults to 0.
             height (int, optional): The height of the rectangle. Defaults to 0.
         """
-        self.__width = __width
-        self.__height = __height
-
-    @property
-    def width(self):
-        """int: The width of the rectangle."""
-        return self.__width
+        self.width = width
+        self.height = height
 
     @property
     def height(self):
         """int: The height of the rectangle."""
         return self.__height
+
+    @property
+    def width(self):
+        """int: The width of the rectangle."""
+        return self.__width
 
     @width.setter
     def width(self, value):
