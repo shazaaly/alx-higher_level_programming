@@ -86,6 +86,4 @@ class Rectangle:
         return '\n'.join(result)
 
     def __repr__(self):
-        if self.width == 0 or self.height == 0:
-            return f"False"
         return f"Rectangle(width={self.width}, height={self.height})"
