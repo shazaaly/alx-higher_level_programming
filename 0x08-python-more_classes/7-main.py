@@ -20,7 +20,7 @@ print(my_rectangle_3)
 
 print("--")
 
-my_rectangle_3.print_symbol = ["C", "is", "fun!"]
+my_rectangle_3.print_symbol = ["C", "is"]
 print(my_rectangle_3)
 
 print("--")
