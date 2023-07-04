@@ -113,5 +113,3 @@ class Rectangle:
             return rect_1.area()
         else:
             rect_2.area()
-
-
