@@ -91,8 +91,8 @@ class Rectangle:
         result = []
         for i in range(self.height):
 
-            row = ''.join(str(Rectangle.print_symbol)) * self.width
-            result.append(row)
+            row = self.print_symbol * self.width
+            result.append(str(row))
         return '\n'.join(result)
 
     def __repr__(self):
