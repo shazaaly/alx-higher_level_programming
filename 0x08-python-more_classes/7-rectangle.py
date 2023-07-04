@@ -90,7 +90,8 @@ class Rectangle:
             return ""
         result = []
         for i in range(self.height):
-            row = Rectangle.print_symbol * self.width
+
+            row = ''.join(str(Rectangle.print_symbol)) * self.width
             result.append(row)
         return '\n'.join(result)
 
