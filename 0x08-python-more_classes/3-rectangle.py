@@ -80,7 +80,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         result = []
-        for i in range(self.width):
-            row = "#" * self.height
+        for i in range(self.height):
+            row = "#" * self.width
             result.append(row)
         return '\n'.join(result)
