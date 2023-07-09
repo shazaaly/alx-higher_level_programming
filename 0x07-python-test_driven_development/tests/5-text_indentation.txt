@@ -4,6 +4,7 @@
 >>> text_indentation("Hello.")
 Hello.
 <BLANKLINE>
+<BLANKLINE>
 
 >>> text_indentation("    Hello")
 Hello
@@ -25,6 +26,7 @@ Hello
 >>> text_indentation("    Shaza Ali.    This is my name.   ")
 Shaza Ali.
 <BLANKLINE>
+<BLANKLINE>
 This is my name.
 <BLANKLINE>
 <BLANKLINE>
@@ -32,6 +34,7 @@ This is my name.
     >>> text_indentation("A very \n new line.")
     A very
     new line.
+    <BLANKLINE>
     <BLANKLINE>
 
 

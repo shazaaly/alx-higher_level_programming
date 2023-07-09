@@ -13,19 +13,42 @@ def text_indentation(text):
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    # remove spaces at bothends
+    # split at \n into lines
+    # strip the separated lines
+    # manage spaces
 
-    result = ""
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-    for char in text:
-        if char in [".", "?", ":"]:
-            result += char + '\n\n'
-        else:
-            result += char
+    lines = text.strip().split("\n")
+    is_space = False
+    result = []
 
-    lines = []
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
 
-    for line in result.splitlines():
-        lines.append(line.strip())
-    result = "\n".join(lines)
+        ind_line = []
+        is_space = False
+        result = []
 
+        for char in line:
+            if char in [".", ":", "?"]:
+                ind_line.append(char)
+                ind_line.append("\n\n")
+                is_space = False
+
+            elif char == " ":
+                if not is_space:
+                    ind_line.append(char)
+                    is_space = True
+            else:
+                ind_line.append(char)
+                is_space = False
+
+        result.extend(ind_line)
+
+    result = "".join(result)
     print(result)
