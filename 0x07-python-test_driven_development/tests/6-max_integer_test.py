@@ -41,4 +41,4 @@ class TestMax(unittest.TestCase):
 
         list6 = []
         self.assertEqual(max_integer(list6), None)
-        raise ("Empty List")
+        raise ValueError("Empty List")
