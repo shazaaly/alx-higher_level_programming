@@ -15,7 +15,6 @@ class TestMax(unittest.TestCase):
         expected_max = 6
         actual_max = max_integer(list1)
         self.assertEqual(actual_max, expected_max)
-        self.assertIsNotNone(max_integer(list1))
 
         list2 = [10]
         expected_max = 10
@@ -41,3 +40,12 @@ class TestMax(unittest.TestCase):
 
         empty = []
         self.assertEqual(max_integer(empty), None)
+
+        at_begin = [10, 4, 3, 2, -1]
+        self.assertEqual(max_integer(at_begin), 10)
+
+        at_middle = [1, 2, 10, 4, 3]
+        self.assertEqual(max_integer(at_middle), 10)
+
+        at_end = [1, 2, 10, 4, 3, 225]
+        self.assertEqual(max_integer(at_middle), 225)
