@@ -6,6 +6,14 @@ Hello.
 <BLANKLINE>
 <BLANKLINE>
 
+>>> text_indentation("Holberton School")
+Holberton School
+
+>>> text_indentation("Holberton.School")
+Holberton.
+
+School
+
 >>> text_indentation("    Hello")
 Hello
 

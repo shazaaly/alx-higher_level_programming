@@ -21,34 +21,19 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    lines = text.strip().split("\n")
-    is_space = False
-    result = []
+    punctuation_marks = ['.', '?', ':']
+    lines = []
+    current_line = ''
 
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
+    for char in text:
+        current_line += char
 
-        ind_line = []
-        is_space = False
-        result = []
+        if char in punctuation_marks:
+            lines.append(current_line.strip())
+            lines.append('\n')
+            lines.append('\n')
+            current_line = ''
 
-        for char in line:
-            if char in [".", ":", "?"]:
-                ind_line.append(char)
-                ind_line.append("\n\n")
-                is_space = False
+    lines.append(current_line.strip())
 
-            elif char == " ":
-                if not is_space:
-                    ind_line.append(char)
-                    is_space = True
-            else:
-                ind_line.append(char)
-                is_space = False
-
-        result.extend(ind_line)
-
-    result = "".join(result)
-    print(result)
+    print(''.join(lines))
