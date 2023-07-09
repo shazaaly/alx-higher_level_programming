@@ -38,3 +38,7 @@ class TestMax(unittest.TestCase):
         list5 = ["ALX", -5, -10, 0, 0]
         with self.assertRaises(TypeError):
             max_integer(list5)
+
+        list6 = []
+        self.assertEqual(max_integer(list6), None)
+        raise("Empty List")
