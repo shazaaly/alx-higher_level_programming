@@ -48,4 +48,4 @@ class TestMax(unittest.TestCase):
         self.assertEqual(max_integer(at_middle), 10)
 
         at_end = [1, 2, 10, 4, 3, 225]
-        self.assertEqual(max_integer(at_middle), 225)
+        self.assertEqual(max_integer(at_end), 225)
