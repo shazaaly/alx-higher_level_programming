@@ -4,11 +4,12 @@ This is the unittest of max integer of list module.
 It contains a class for unitest max_integer module.
 """
 
-from max_integer_source import max_integer
 import unittest
+max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMax(unittest.TestCase):
+    """Define unittests for max_integer([])"""
     def test_max_integer(self):
         list1 = [2, 3, 4, 5, 6]
         expected_max = 6
