@@ -13,8 +13,13 @@ class Rectangle(BaseGeometry):
     """
 
     def __init__(self, width, height):
-        """Instantiation with width and height"""
-        self.width = width
-        self.height = height
+        """Intialize a new Rectangle.
+
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+        """
         self.integer_validator("width", width)
+        self.width = width
         self.integer_validator("height", height)
+        self.height = height
