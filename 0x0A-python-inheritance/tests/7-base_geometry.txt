@@ -93,7 +93,12 @@ Traceback (most recent call last):
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 
-
+======================================
+Passing dict to method
+>>> bg.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
 ========================================
 
 >>> bg.integer_validator("bool", false)
