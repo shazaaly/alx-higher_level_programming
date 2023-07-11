@@ -5,7 +5,7 @@
 	My name is Shaza Ali
 
 	>>> say_my_name("Shaza")
-	My name is Shaza
+	My name is Shaza 
 	>>> say_my_name("Shaza", 3)
 	Traceback (most recent call last):
 	    ...
