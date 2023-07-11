@@ -50,6 +50,22 @@ NameError: name 'my_list13' is not defined
 
 --------------------------------------------
 
+Parent object
+
+
+>>> my_list = [1, 2, 5]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest 1-my_list.txt[15]>", line 1, in <module>
+    my_list.print_sorted()
+AttributeError: 'list' object has no attribute 'print_sorted'
+
+
+--------------------------------------------
+
+
 
 List of one number only
 
