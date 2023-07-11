@@ -28,7 +28,7 @@ class BaseGeometry:
             exception with the message <name> must be greater than 0
         """
 
-        if not type(value) is int:
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
 
         if value <= 0:
