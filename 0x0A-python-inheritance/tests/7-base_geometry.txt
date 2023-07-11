@@ -65,6 +65,15 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
+Passing one argument to area method
+
+
+>>> bg = BaseGeometry()
+>>> bg.area(7)
+Traceback (most recent call last):
+	      ...
+TypeError: area() takes 1 positional argument but 2 were given
+
 ======================================
 
 case : test Boolean
