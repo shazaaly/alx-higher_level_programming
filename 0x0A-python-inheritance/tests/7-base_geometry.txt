@@ -70,5 +70,14 @@ Traceback (most recent call last):
 ...
 TypeError: data must be an integer
 
+======================================
+
+case : test more than exp args
+
+>>> bg.integer_validator("data", 1, 20)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
 
 
