@@ -8,4 +8,10 @@ class BaseGeometry:
     """Basic class named BaseGeometry
     """
 
-    pass
+    def area(self):
+        """
+        Public instance method: raises exception
+        No implementation yet
+        Exception: area() is not implemented
+        """
+        raise Exception("area() is not implemented")
