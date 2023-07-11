@@ -33,7 +33,3 @@ class Rectangle(BaseGeometry):
         res += str(self.__height)
 
         return res
-
-
-
-
