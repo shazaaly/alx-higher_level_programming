@@ -33,3 +33,31 @@ Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
 
+=========================================================
+
+>>> bg.integer_validator("data", [-4, 5, 3])
+Traceback (most recent call last):
+...
+TypeError: data must be an integer
+
+
+>>> bg.integer_validator("data", None)
+Traceback (most recent call last):
+...
+TypeError: data must be an integer
+
+
+>>> bg.integer_validator("data",)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+================================================================================
+case : test area()
+
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
