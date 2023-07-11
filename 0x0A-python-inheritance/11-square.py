@@ -17,7 +17,9 @@ class Square(Rectangle):
             size must be private. No getter or setter, must be a positive
             integer, validated by integer_validator
         """
-        self.integer_validator("size", size)
+        self.integer_validator("size", size)  # valid
+        super().__init__(size, size)    # Call the parent's constructor with \
+        # width and height set to size
         self.__size = size
 
     def area(self):
