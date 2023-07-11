@@ -21,13 +21,3 @@ class Square(Rectangle):
         super().__init__(size, size)    # Call the parent's constructor with \
         # width and height set to size
         self.__size = size
-
-    def area(self):
-        """Return the area of the rectangle."""
-        return self.__size * self.__size
-
-    def __str__(self):
-        """resturns description of sqaure like [Square] <width>/<height>"""
-        desc = type(self).__name__
-        desc += str(self.__size) + "/" + str(self.__size)
-        return desc
