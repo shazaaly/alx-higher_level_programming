@@ -1,0 +1,81 @@
+Test for 1-my_list
+--------------------------------------------
+
+case 0: import
+>>> MyList = __import__('1-my_list').MyList
+>>>
+-------------------------------------------
+case 1 : main case
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>>
+
+--------------------------------------------
+
+
+Empty List Case
+
+
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
+>>>
+
+
+--------------------------------------------
+
+
+No object case
+
+
+>>> my_list13.print_sorted()
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest 1-my_list.txt[13]>", line 1, in <module>
+    my_list13.print_sorted()
+NameError: name 'my_list13' is not defined
+
+--------------------------------------------
+
+
+List of one number only
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+
+
+--------------------------------------------
+
+
+List of same numbers
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1, 1, 1, 1, 1]
+
+
+
+
+
+
+
