@@ -1,0 +1,2 @@
+
+>>> lookup = __import__('0-lookup').lookup
