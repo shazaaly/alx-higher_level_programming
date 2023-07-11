@@ -73,6 +73,22 @@ List of same numbers
 >>> my_list.print_sorted()
 [1, 1, 1, 1, 1]
 
+--------------------------------------------
+
+
+List of Negative numbers
+
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-10)
+>>> my_list.append(5)
+>>> my_list.append(2)
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[-10, -1, 1, 2, 5]
+
+
+
 
 
 
