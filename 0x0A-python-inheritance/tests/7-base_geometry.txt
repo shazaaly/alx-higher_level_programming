@@ -93,10 +93,10 @@ Traceback (most recent call last):
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 
-======================================
-Passing dict to method
->>> bg = BaseGeometry()
->>> bg.integer_validator("age", {3, 4})
+
+========================================
+
+>>> bg.integer_validator("bool", false)
 Traceback (most recent call last):
-          ...
-TypeError: age must be an integer
+...
+NameError: name 'false' is not defined
