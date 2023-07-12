@@ -11,10 +11,3 @@ def class_to_json(obj):
         obj (_type_)
     """
     return obj.__dict__
-
-
-
-
-
-
-
