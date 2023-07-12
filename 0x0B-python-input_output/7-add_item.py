@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Add all arguments to a Python list and save them to a file."""
 import sys
+import os
 
 
 if __name__ == "__main__":
@@ -9,9 +10,9 @@ if __name__ == "__main__":
     load_from_json_file = \
         __import__('6-load_from_json_file').load_from_json_file
 
-    try:
+    if os.path.isfile("add_item.json"):
         items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
+    else:
         items = []
 
     items.extend(sys.argv[1:])
