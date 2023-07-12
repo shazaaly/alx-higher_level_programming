@@ -1,4 +1,5 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+
 """This Module is about reading eads a text file (UTF8)
  and prints it to stdout
 """
