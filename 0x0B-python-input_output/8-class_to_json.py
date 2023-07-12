@@ -10,6 +10,7 @@ def class_to_json(obj):
     Args:
         obj (_type_)
     """
+    return obj.__dict__
 
 
 
