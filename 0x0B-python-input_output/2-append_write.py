@@ -14,10 +14,9 @@ def append_write(filename="", text=""):
     """
 
     with open(filename, "a", encoding="utf-8") as file:
-        file.seek(0, 2)
-        file.write(text)
+        file.write("\n" + text)
 
     with open(filename, "r") as file:
-        content = file.read()
-        count = len(content)
+        file.seek(0, 2)
+        count = file.tell()
         return count
