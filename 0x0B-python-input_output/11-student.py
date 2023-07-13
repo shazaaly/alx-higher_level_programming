@@ -2,8 +2,6 @@
 """This module is about a class Student that defines a student
 """
 
-import json
-
 
 class Student:
     """Public instance attributes: first_name
