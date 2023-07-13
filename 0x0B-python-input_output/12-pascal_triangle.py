@@ -17,6 +17,6 @@ def pascal_triangle(n):
             if col == 0 or col == row:
                 curr_row.append(1)
             else:
-                curr_row.append([row - 1][col - 1] + [row - 1][col])
+                curr_row.append(tri[row - 1][col - 1] + tri[row - 1][col])
         tri.app(curr_row)
     return tri
