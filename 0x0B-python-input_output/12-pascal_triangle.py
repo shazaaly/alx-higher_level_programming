@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Module to a list of lists of integers representingthe Pascals triangle of n:
+"""
 
 
 def pascal_triangle(n):
