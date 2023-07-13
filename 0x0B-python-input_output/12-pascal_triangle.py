@@ -8,7 +8,8 @@ def pascal_triangle(n):
        representing the Pascal triangle of n
     Args: n ()
     """
-
+    if n <= 0:
+        return []
     tri = []
 
     for row in range(n):
