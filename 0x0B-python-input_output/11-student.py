@@ -35,7 +35,6 @@ class Student:
         """replaces all attributes of the Student instance:
         Args: json
         """
-        data = json.loads(json)
 
-        for key, value in data.items():
+        for key, value in json.items():
             setattr(self, key, value)
