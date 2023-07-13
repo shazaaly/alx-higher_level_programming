@@ -25,6 +25,7 @@ class Student:
             attrs (_type_, optional)
         """
         if attrs is None:
+
             return self.__dict__
         if (type(attr) == str for attr in attrs):
             return {attr: getattr(self, attr)
