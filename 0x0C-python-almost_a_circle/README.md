@@ -62,13 +62,4 @@ python3 -m unittest discover tests
 ```
 
 Make sure you are in the project directory when running the command.
-
-## Contributing
-
-Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
-
-Please adhere to the coding style and guidelines defined in the project's requirements.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
+Copyright © 2023 ALX, All rights reserved.
