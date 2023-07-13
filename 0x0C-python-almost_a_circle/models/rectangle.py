@@ -3,11 +3,13 @@
 """This module is about a class Rectangle that inherits from Base
 """
 
-Base = __import__("base.by").Base
+from models.base import Base
 
 
 class Rectangle(Base):
-    """class with private attributes :width, height, x, y
+    """class with private attributes
+    Args: width, height, x, y
+    Raises : TypeError, ValueError
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -23,8 +25,12 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
-        self.__width = width
+    def width(self, val):
+        if type(val) != int:
+            raise TypeError("width must be an integer")
+        if val < 0:
+            raise ValueError("width must be greater than zero!")
+        self.__width = val
 
     """height attribute"""
     @property
@@ -32,8 +38,13 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
-        self.__height = height
+    def height(self, val):
+        if type(val) != int:
+            raise TypeError("height must be an integer")
+        if val < 0:
+            raise ValueError("height must be greater than zero!")
+
+        self.__height = val
 
     """x attribute"""
     @property
@@ -41,8 +52,13 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x):
-        self.__x = x
+    def x(self, val):
+        if type(val) != int:
+            raise TypeError("x must be an integer")
+        if val < 0:
+            raise ValueError("x must be greater than zero!")
+
+        self.__x = val
 
     """y attribute"""
     @property
@@ -50,5 +66,9 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y):
-        self.__y = y
+    def y(self, val):
+        if type(val) != int:
+            raise TypeError("y must be an integer")
+        if val < 0:
+            raise ValueError("y must be greater than zero!")
+        self.__y = val
