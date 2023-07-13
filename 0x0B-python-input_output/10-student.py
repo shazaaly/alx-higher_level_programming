@@ -29,8 +29,3 @@ class Student:
         else:
             return {attr: getattr(self, attr)
                     for attr in attrs if isinstance(attr, str)}
-
-
-
-
-
