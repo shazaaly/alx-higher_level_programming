@@ -7,8 +7,15 @@ def pascal_triangle(n):
     Args: n (int)
     """
 
-    for row in n:
-        for col in row:
-            row[0] = 1
-            row[len(row) - 1] = 1
+    tri = []
 
+    for row in range(n):
+        row_list = []
+        row[0] = 1
+        row[len(row) - 1] = 1
+        for el in row:
+            if row >= 2:
+                el = row - 1[0] + row - 1[1]
+                row_list.append(el)
+
+    tri.append(row_list)
