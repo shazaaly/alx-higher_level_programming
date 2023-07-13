@@ -9,14 +9,14 @@ def pascal_triangle(n):
     Args: n ()
     """
 
-    tri = [[1]]
+    tri = []
 
     for row in range(n):
-        row_list = []
-        row[0] = 1
-        row[len(row) - 1] = 1
-        for col in range(row):
-            if row >= 2:
-                tri[row].append([row - 1][col - 1] + [row - 1][col])
-
+        curr_row = []
+        for col in range(row + 1):
+            if col == 0 or col == row:
+                curr_row.append(1)
+            else:
+                curr_row.append([row - 1][col - 1] + [row - 1][col])
+        tri.app(curr_row)
     return tri
