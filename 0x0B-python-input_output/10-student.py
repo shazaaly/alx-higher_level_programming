@@ -27,6 +27,6 @@ class Student:
         if attrs is None:
 
             return self.__dict__
-        if (type(attr) == str for attr in attrs):
+        if all(type(attr) == str for attr in attrs):
             return {attr: getattr(self, attr)
                     for attr in attrs if isinstance(attr, str)}
