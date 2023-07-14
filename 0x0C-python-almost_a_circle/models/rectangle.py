@@ -39,6 +39,14 @@ class Rectangle(Base):
             raise ValueError("y must be greater than zero!")
         self.__y = y
 
+    def area(self):
+        """function to calc area of rectangle
+
+        Returns:
+            int: area
+        """
+        return self.__width * self.__height
+
     @property
     def width(self):
         """width getter"""
@@ -94,3 +102,5 @@ class Rectangle(Base):
             raise ValueError("y must be greater than zero!")
 
         self.__y = val
+
+
