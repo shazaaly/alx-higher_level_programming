@@ -68,15 +68,14 @@ class TestRectangleSubclass(unittest.TestCase):
             Rectangle(3, 2, 0, "45")
 
     def test_zero_attrs(self):
-        with self.assertRaises(ValueError) as e:
-            Rectangle(3, -2, 0, "45")
-
-        self.assertEqual(str(e.exception), "y must be an integer")
-
-        with self.assertRaises(ValueError) as e:
-            Rectangle(3, 2, 0, -15)
-
-        self.assertEqual(str(e.exception), "y must be greater than zero!")
+        with self.assertRaises(ValueError, msg="width must be greater than zero!"):
+            Rectangle(-3, 2, 0, 5)
+        with self.assertRaises(ValueError, msg="height must be greater than zero!"):
+            Rectangle(3, -3, 4, 45)
+        with self.assertRaises(ValueError, msg="x must be greater than zero!"):
+            Rectangle(3, 2, -10, 45)
+        with self.assertRaises(ValueError, msg="y must be greater than zero!"):
+            Rectangle(3, 2, 10, -5)
 
     if __name__ == "__main__":
         unittest.main()
