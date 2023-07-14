@@ -92,4 +92,5 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if val < 0:
             raise ValueError("y must be greater than zero!")
+
         self.__y = val
