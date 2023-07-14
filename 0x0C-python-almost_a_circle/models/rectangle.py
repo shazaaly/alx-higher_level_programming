@@ -47,6 +47,15 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
+    def display(self):
+        """display rectangle with "#"
+
+        Returns:
+           print "#" according to w and h_
+        """
+        for i in range(self.__height):
+            print("#" * self.__width)
+
     @property
     def width(self):
         """width getter"""
