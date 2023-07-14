@@ -52,20 +52,30 @@ class TestRectangleSubclass(unittest.TestCase):
         self.assertEqual(y, 6)
 
     def test_str_width(self):
-        with self.assertRaises(TypeError, "width must be an integer"):
-            Rectangle("3", 2)
+        with self.assertRaises(TypeError, msg="width must be an integer"):
+            Rectangle("3", 2, 2, 2)
 
     def test_str_height(self):
-        with self.assertRaises(TypeError, "height must be an integer"):
-            Rectangle(3, "2")
+        with self.assertRaises(TypeError, msg="height must be an integer"):
+            Rectangle(2, "3")
 
     def test_str_x(self):
-        with self.assertRaises(TypeError, "x must be an integer"):
+        with self.assertRaises(TypeError, msg="x must be an integer"):
             Rectangle(3, 2, "sghv")
 
     def test_str_y(self):
         with self.assertRaises(TypeError, msg="y must be an integer"):
             Rectangle(3, 2, 0, "45")
+
+    def test_zero_attrs(self):
+        with self.assertRaises(ValueError, msg="width must be greater than zero!"):
+            Rectangle(-3, 2, 0, "45")
+        with self.assertRaises(ValueError, msg="height must be greater than zero!"):
+            Rectangle(3, -2, 0, "45")
+        with self.assertRaises(ValueError, msg="x must be greater than zero!"):
+            Rectangle(3, 2, -10, "45")
+        with self.assertRaises(ValueError, msg="y must be greater than zero!"):
+            Rectangle(3, 2, 10, -5)
 
     if __name__ == "__main__":
         unittest.main()
