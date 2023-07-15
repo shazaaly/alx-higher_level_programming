@@ -53,8 +53,22 @@ class Rectangle(Base):
         Returns:
            print "#" according to w and h_
         """
+
+        for y_val in range(self.__y):
+            print()
+
         for i in range(self.__height):
+            for x_val in range(self.__x):
+                print(" ", end="")
             print("#" * self.__width)
+
+    def __str__(self):
+        """_summary_
+
+        Returns:
+            string representation [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     @property
     def width(self):
