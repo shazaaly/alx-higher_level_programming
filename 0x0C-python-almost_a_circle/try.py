@@ -1,11 +1,15 @@
+# Dimensions of the rectangle
+width = 5
+height = 5
 
-for i in range(5):
-    print(" ")
-    for j in range(5):
-        print(" ", end="")
+# Position of the rectangle
+x = 3
+y = 7
 
-for w in range(5):
-print("life")
-
-
-
+# Loop over the rows
+for row in range(y, y + height):
+    # Loop over the columns
+    for col in range(x, x + width):
+        # Print a symbol to represent the rectangle
+        print("*", end="")
+    print()  # Move to the next line after each row
