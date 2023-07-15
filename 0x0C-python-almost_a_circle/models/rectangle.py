@@ -62,10 +62,10 @@ class Rectangle(Base):
                 print(" ", end="")
             print("#" * self.__width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute
         """
-        if len(args) != 0:
+        if args and len(args) != 0:
 
             for arg in args:
 
@@ -79,6 +79,9 @@ class Rectangle(Base):
                     self.x = args[3]
                 if len(args) >= 5:
                     self.y = args[4]
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
 
     def __str__(self):
         """_summary_
