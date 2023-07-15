@@ -35,7 +35,7 @@ class Base:
                 for obj in list_objs:
                     dic = obj.to_dictionary()
                     list_of_dicts.append(dic)
-                    file.write(cls.to_json_string(list_of_dicts))
+                file.write(cls.to_json_string(list_of_dicts))
 
     def __init__(self, id=None):
         """cass constructor
