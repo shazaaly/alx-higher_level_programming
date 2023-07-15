@@ -147,3 +147,6 @@ class Rectangle(Base):
             raise ValueError("y must be greater than zero!")
 
         self.__y = val
+
+    def to_dictionary(self):
+        return self.__dict__
