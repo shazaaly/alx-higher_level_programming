@@ -32,6 +32,11 @@ class Square(Rectangle):
         self.height = val
 
     def update(self, *args, **kwargs):
+        """that assigns attributes to args
+
+        Returns:
+            key and value if kwargs
+        """
         if args and len(args) != 0:
             for arg in args:
                 if len(args) >= 1:
@@ -47,10 +52,15 @@ class Square(Rectangle):
                 return (k, v)
 
     def __str__(self):
-        """_summary_
+        """string representation
 
         Returns:
             string representation [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
         return f"[Square]\
  ({self.id})  {self.x}/{self.y} - {self.width}"
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Square
+        """
+        return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
