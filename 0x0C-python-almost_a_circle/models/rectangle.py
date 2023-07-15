@@ -89,7 +89,8 @@ class Rectangle(Base):
         Returns:
             string representation [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle]\
+ ({self.id}){self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     @property
     def width(self):
@@ -146,5 +147,3 @@ class Rectangle(Base):
             raise ValueError("y must be greater than zero!")
 
         self.__y = val
-
-
