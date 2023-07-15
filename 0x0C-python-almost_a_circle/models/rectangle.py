@@ -149,4 +149,11 @@ class Rectangle(Base):
         self.__y = val
 
     def to_dictionary(self):
-        return self.__dict__
+        """dictionary representation """
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
