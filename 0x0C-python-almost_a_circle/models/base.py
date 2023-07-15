@@ -27,10 +27,15 @@ class Base:
             void: write json to a file
         """
         target_file = cls.__name__ + ".json"
+        list_of_dicts = []
         with open(target_file, "w") as file:
             if list_objs is None:
-                file.write([])
-            file.write(cls.to_json_string(list_objs))
+                file.write("[]")
+            else:
+                for obj in list_objs:
+                    dic = obj.to_dictionary()
+                    list_of_dicts.append(dic)
+                    file.write(cls.to_json_string(list_of_dicts))
 
     def __init__(self, id=None):
         """cass constructor
