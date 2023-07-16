@@ -5,7 +5,6 @@ It contains a class for unitest
 """
 
 import unittest
-
 from models.rectangle import Rectangle
 
 
@@ -76,6 +75,22 @@ class TestRectangleSubclass(unittest.TestCase):
             Rectangle(3, 2, -10, 45)
         with self.assertRaises(ValueError, msg="y must be greater than zero!"):
             Rectangle(3, 2, 10, -5)
+
+    def test_to_dictionary(self):
+        """test to_dictionary function
+        """
+        rect = Rectangle(1, 3, 15, 4, 4)
+        dict = rect.to_dictionary()
+        expected_dict = {
+            "width": 1,
+            "height": 3,
+            "x": 15,
+            "y": 4,
+            "id": 4,
+
+        }
+
+        self.assertEqual(expected_dict, dict)
 
     if __name__ == "__main__":
         unittest.main()
