@@ -101,5 +101,18 @@ class TestRectangleSubclass(unittest.TestCase):
         self.assertEqual(rec.y, 40)
         self.assertEqual(rec.id, 20)
 
+    def test_area(self):
+        r1 = Rectangle(5, 6, 4, 3, 13)
+        expected = 30
+        self.assertEqual(expected, r1.area())
+
+    def test_area_arg(self):
+        r1 = Rectangle(5, 6, 4, 3, 13)
+        with self.assertRaises(TypeError):
+            r1.area(2)
+
+
+
+
     if __name__ == "__main__":
         unittest.main()
