@@ -4,6 +4,7 @@
 """
 
 import json
+import os.path
 
 
 class Base:
@@ -62,6 +63,25 @@ class Base:
                 inst = cls(4)
             inst.update(**dictionary)
             return inst
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Args: a class cls
+        returns a list of instances
+        """
+        inst_list = []
+        file = cls.__name__ + ".json"
+        if not os.path.exists(file):
+            return []
+        with open(file, "r") as f:
+            json_str = f.read()
+            loaded_list = cls.from_json_string(json_str)
+            for dict in loaded_list:
+                inst = cls.create(**dict)
+                inst_list.append(inst)
+
+        return inst_list
 
     def __init__(self, id=None):
         """cass constructor
