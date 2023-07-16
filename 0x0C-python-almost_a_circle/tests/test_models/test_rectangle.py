@@ -92,5 +92,14 @@ class TestRectangleSubclass(unittest.TestCase):
 
         self.assertEqual(expected_dict, dict)
 
+    def test_update(self):
+        rec = Rectangle(3, 4, 5, 9, 8)
+        rec.update(20, 15, 3, 6, 40)
+        self.assertEqual(rec.width, 15)
+        self.assertEqual(rec.height, 3)
+        self.assertEqual(rec.x, 6)
+        self.assertEqual(rec.y, 40)
+        self.assertEqual(rec.id, 20)
+
     if __name__ == "__main__":
         unittest.main()
