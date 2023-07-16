@@ -9,3 +9,11 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
+    """test Square class inistantiation
+    """
+    def test_inst(self):
+        """test instantation from Suare class
+        """
+        square = Square(5)
+        self.assertEqual(square.id, 1)
+        self.assertEqual(square.size, 5)
