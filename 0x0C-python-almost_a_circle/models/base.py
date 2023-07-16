@@ -49,6 +49,20 @@ class Base:
                     list_of_dicts.append(dic)
                 file.write(cls.to_json_string(list_of_dicts))
 
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set
+        Args:
+            class and **dictionary
+        """
+        if dictionary is not None:
+            if cls.__name__ == "Rectangle":
+                inst = cls(4, 16)
+            if cls.__name__ == "Square":
+                inst = cls(4)
+            inst.update(**dictionary)
+            return inst
+
     def __init__(self, id=None):
         """cass constructor
         Args:
