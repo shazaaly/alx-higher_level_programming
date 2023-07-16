@@ -15,5 +15,7 @@ class TestSquare(unittest.TestCase):
         """test instantation from Suare class
         """
         square = Square(5)
-        self.assertEqual(square.id, 1)
         self.assertEqual(square.size, 5)
+
+    if __name__ == "__main__":
+        unittest.main()

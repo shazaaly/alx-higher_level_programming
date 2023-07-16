@@ -111,8 +111,10 @@ class TestRectangleSubclass(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1.area(2)
 
-
-
+    def test_display(self):
+        """test display method
+        """
+        r1 = Rectangle(5, 7, 6, 6, 80)
 
     if __name__ == "__main__":
         unittest.main()
