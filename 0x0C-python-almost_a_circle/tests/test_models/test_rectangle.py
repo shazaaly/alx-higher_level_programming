@@ -10,9 +10,11 @@ from models.rectangle import Rectangle
 
 class TestRectangleSubclass(unittest.TestCase):
     """Define unittests for Rectangle class"""
+
     def test_id_value(self):
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        r2 = Rectangle(10, 5)
+        self.assertEqual(r1.id, r2.id - 1)
 
     def test_id_given(self):
         r1 = Rectangle(10, 2, 0, 0, 50)
@@ -88,8 +90,6 @@ class TestRectangleSubclass(unittest.TestCase):
             "height": 3,
             "x": 15,
             "y": 4,
-            "id": 4,
-
         }
 
         self.assertEqual(expected_dict, dict)

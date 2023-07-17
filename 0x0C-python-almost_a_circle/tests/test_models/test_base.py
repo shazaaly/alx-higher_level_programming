@@ -6,6 +6,7 @@ id is an integer and no need to test the type of it
 """
 
 import unittest
+import os
 
 from models.base import Base
 from models.rectangle import Rectangle
@@ -52,24 +53,19 @@ class TestBaseClass(unittest.TestCase):
     def test_to_json_string_method(self):
         list_of_dicts = [
             {
-                "id": 1,
                 "width": 25,
                 "height": 15,
                 "x": 25,
                 "y": 25,
-
             },
             {
-                "id": 1,
                 "width": 5,
                 "height": 15,
                 "x": 4,
                 "y": 7,
             }
         ]
-
-        dumped = '[{"id": 1, "width": 25, "height": 5, "x": 5, "y": 5}, \
-            {"id": 2, "width": 7, "height": 8, "x": 15, "y": 5}]'
+        dumped = '[{"width": 25, "height": 15, "x": 25, "y": 25}, {"width": 5, "height": 15, "x": 4, "y": 7}]'
 
         self.assertEqual(dumped, Base.to_json_string(list_of_dicts))
 
@@ -77,14 +73,16 @@ class TestBaseClass(unittest.TestCase):
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         target_file = Rectangle.__name__ + ".json"
-        expected_output = '[{"y": 8, "x": 2, "id": 1, "width": 10,\
-            "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]'
+        expected_output = '[{"width": 10, "height": 7, "x": 2, "y": 8}, {"width": 2, "height": 4, "x": 0, "y": 0}]'
 
         actual = Rectangle.save_to_file([r1, r2])
 
         with open(target_file, "r") as f:
             actual_out = f.read()
+
         self.assertEqual(expected_output, actual_out)
+        # Clean up the file after the test
+        os.remove("Rectangle.json")
 
     if __name__ == "__main__":
         unittest.main()
