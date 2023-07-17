@@ -116,7 +116,9 @@ class TestRectangleSubclass(unittest.TestCase):
     def test_display(self):
         """test display method
         """
-        r1 = Rectangle(5, 7, 6, 6, 80)
+        r1 = Rectangle(4, 6)
+        expected = "####\n####\n####\n####\n####\n####\n"
+        self.assertEqual(r1.display(), expected)
 
     if __name__ == "__main__":
         unittest.main()
