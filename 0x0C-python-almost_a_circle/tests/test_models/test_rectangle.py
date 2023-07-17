@@ -3,7 +3,8 @@
 This is the unittest of Rectangle Module
 It contains a class for unitest
 """
-
+import io
+import sys
 import unittest
 from models.rectangle import Rectangle
 
@@ -118,7 +119,13 @@ class TestRectangleSubclass(unittest.TestCase):
         """
         r1 = Rectangle(4, 6)
         expected = "####\n####\n####\n####\n####\n####\n"
-        self.assertEqual(r1.display(), expected)
+        captured = io.StringIO()
+        sys.stdout = captured
+        # Call the display method
+        r1.display()
+        actual_output = captured.getvalue()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(actual_output, expected)
 
     def test_string_representation(self):
         r1 = Rectangle(15, 20, 5, 7, 9)
