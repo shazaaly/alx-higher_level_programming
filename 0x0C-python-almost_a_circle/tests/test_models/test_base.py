@@ -48,6 +48,30 @@ class TestBaseClass(unittest.TestCase):
         base1.id = 36
         self.assertEqual(36, base1.id)
 
+    def test_to_json_string_method(self):
+        list_of_dicts = [
+            {
+                "id": 1,
+                "width": 25,
+                "height": 15,
+                "x": 25,
+                "y": 25,
+
+            },
+            {
+                "id": 1,
+                "width": 5,
+                "height": 15,
+                "x": 4,
+                "y": 7,
+            }
+        ]
+
+        dumped = '[{"id": 1, "width": 25, "height": 5, "x": 5, "y": 5}, \
+            {"id": 2, "width": 7, "height": 8, "x": 15, "y": 5}]'
+
+        self.assertEqual(dumped, Base.to_json_string(list_of_dicts))
+
 
 if __name__ == "__main__":
     unittest.main()
