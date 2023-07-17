@@ -8,6 +8,7 @@ id is an integer and no need to test the type of it
 import unittest
 
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBaseClass(unittest.TestCase):
@@ -72,6 +73,18 @@ class TestBaseClass(unittest.TestCase):
 
         self.assertEqual(dumped, Base.to_json_string(list_of_dicts))
 
+    def test_save_to_file(self):
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        target_file = Rectangle.__name__ + ".json"
+        expected_output = '[{"y": 8, "x": 2, "id": 1, "width": 10,\
+            "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]'
 
-if __name__ == "__main__":
-    unittest.main()
+        actual = Rectangle.save_to_file([r1, r2])
+
+        with open(target_file, "r") as f:
+            actual_out = f.read()
+        self.assertEqual(expected_output, actual_out)
+
+    if __name__ == "__main__":
+        unittest.main()
