@@ -121,8 +121,8 @@ class TestRectangleSubclass(unittest.TestCase):
         self.assertEqual(r1.display(), expected)
 
     def test_string_representation(self):
-        r1 = Rectangle(15, 20, 5, 7)
-        expected = "[Rectangle] (11)5/7 - 15/20"
+        r1 = Rectangle(15, 20, 5, 7, 9)
+        expected = "[Rectangle] (9)5/7 - 15/20"
         self.assertEqual(str(r1), expected)
 
     if __name__ == "__main__":
