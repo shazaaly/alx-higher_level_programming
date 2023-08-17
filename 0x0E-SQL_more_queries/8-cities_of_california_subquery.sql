@@ -4,14 +4,12 @@
 -- Results must be sorted in ascending order by cities.id
 
 
-USE `hbtn_0d_usa`
-
 SELECT id, name
-FROM `cities`
+FROM cities
 WHERE state_id = (
-	SELECT id FROM `states`
+	SELECT id FROM states
 	WHERE name = 'California'
 
 )
-ORDER BY `id` ASC;
-;
+ORDER BY id ASC;
+
