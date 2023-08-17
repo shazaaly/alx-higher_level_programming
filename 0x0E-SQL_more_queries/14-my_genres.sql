@@ -11,5 +11,5 @@ JOIN tv_shows
 ON tv_shows.id = tv_shows_genres.show_id
 WHERE tv_shows.title = 'Dexter'
 GROUP BY name
-ORDER BY tv_genres.name ASC;
+ORDER BY name ASC;
 
