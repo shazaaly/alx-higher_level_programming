@@ -1,3 +1,5 @@
 #!/usr/bin/node
-const myVar = 'JavaScript is amazing';
+// this script is to print a constant string variable
+
+const myVar = "JavaScript is amazing";
 console.log(myVar);
