@@ -2,7 +2,7 @@
 class Rectangle {
   constructor (w, h) {
     if (!w || !h || w < 0 || h < 0) {
-      // empty object
+      return;
 
     } else {
       this.w = w;
