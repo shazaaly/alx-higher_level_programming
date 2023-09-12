@@ -1,10 +1,7 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if (!w || !h || w < 0 || h < 0) {
-      // create empty obj
-
-    } else {
+    if (w > 0 && h > 0) {
       this.w = w;
       this.h = h;
     }
