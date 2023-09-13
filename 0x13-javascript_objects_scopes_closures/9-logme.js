@@ -1,10 +1,10 @@
 #!/usr/bin/node
+let counter = 0;
 
 exports.logMe = function (item) {
-  let counter = 0;
   function tracker () {
     console.log(counter + ':' + item);
     counter++;
   }
-  return tracker;
+  return tracker();
 };
