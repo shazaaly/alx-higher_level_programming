@@ -5,8 +5,6 @@ const dest = process.argv[4];
 
 const fs = require('fs');
 
-const fileAContent = fs.readFileSync(fileA, 'utf-8');
-const fileBContent = fs.readFileSync(fileB, 'utf-8');
-const concatenated = fileAContent + '\n' + fileBContent;
-
-fs.writeFileSync(concatenated, dest);
+const fileAContent = fs.readFileSync(fileA.toString());
+const fileBContent = fs.readFileSync(fileB.toString());
+fs.writeFileSync(dest, fileAContent, fileBContent);
