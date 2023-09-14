@@ -15,8 +15,8 @@ if __name__ == "__main__":
     cur.execute(
         "SELECT cities.name FROM cities JOIN \
             states ON cities.state_id = states.id \
-            WHERE states.name = %s ORDER BY cities.id ASC;", (stateName,))
+            WHERE states.name = '{}' ORDER BY cities.id ASC;".format(stateName))
 
     cities = cur.fetchall()
-    for city in cities:
-        print(city)
+    citiesNames = [city[0] for city in cities]
+    print(', '.join(citiesNames))
