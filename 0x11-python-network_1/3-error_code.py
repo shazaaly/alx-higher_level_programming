@@ -7,9 +7,8 @@ displays the body of the response
 import sys
 import urllib.request
 
-req = urllib.request.Request(sys.argv[1])
 try:
-    with urllib.request.urlopen(req) as response:
-        print(response.decode('UTF-8'))
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        print(response.read().decode('UTF-8'))
 except urllib.error.HTTPError as e:
     print(f"Error code: {e.code}")
