@@ -10,4 +10,4 @@ if __name__ == '__main__':
     import sys
     with urllib.request.urlopen(sys.argv[1]) as res:
         headers = res.headers
-        print(headers['X-Request-Id'])
+        print(dict(headers).get('X-Request-Id'))
