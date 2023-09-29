@@ -7,7 +7,6 @@ displays the body of the response
 import sys
 import urllib.request
 
-
 try:
     with urllib.request.urlopen(sys.argv[1]) as res:
         print(res.read().decode('UTF-8'))
