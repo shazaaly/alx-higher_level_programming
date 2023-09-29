@@ -5,7 +5,7 @@
 import requests
 response = requests.get('https://alx-intranet.hbtn.io/status')
 
-if response.status_code == 200:
-    content = response.text
-    print('Body response:\n\t- type: {}\n\t- content: {}'
-          .format(type(content), content))
+content = response.text
+print("Body response:")
+print(f"\t- type: {type(content)}")
+print(f"\t- content: {content}")
