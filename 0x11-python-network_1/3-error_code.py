@@ -5,10 +5,10 @@ displays the body of the response
 (decoded in utf-8).
 """
 import sys
-import urllib
+from urllib import request, error
 
 try:
-    with urllib.request.urlopen(sys.argv[1]) as res:
+    with request.urlopen(sys.argv[1]) as res:
         print(res.read().decode('UTF-8'))
-except urllib.error.HTTPError as e:
+except error.HTTPError as e:
     print('Error code:', e.code)
