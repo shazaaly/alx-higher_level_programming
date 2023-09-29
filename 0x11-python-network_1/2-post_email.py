@@ -15,4 +15,4 @@ dat_encode = urllib.parse.urlencode(data).encode('ascii')
 req = urllib.request.Request(url, dat_encode)
 with urllib.request.urlopen(req) as response:
     res = response.read()
-    print(f"{res.read().encode('UTF-8')}")
+    print(res.read().decode('UTF-8'))
