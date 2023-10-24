@@ -1,8 +1,5 @@
 #!/usr/bin/node
-
-const { log } = require('console');
 const request = require('request');
-const id = 18;
 const url = process.argv[2];
 
 request(url, (err, res, body) => {
@@ -15,5 +12,5 @@ request(url, (err, res, body) => {
       count++;
     }
   });
-  console.log(count);
+  console.log(err || count);
 });
