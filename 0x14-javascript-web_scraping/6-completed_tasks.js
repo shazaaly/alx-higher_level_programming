@@ -7,17 +7,17 @@ const userCompleted = {};
 request(url, (err, res, body) => {
   if (err) {
     console.log(err);
-    return;
-  }
-  const todos = JSON.parse(body);
-  todos.forEach(todo => {
-    if (todo.completed === true) {
-      if (userCompleted[todo.userId] === undefined) {
-        userCompleted[todo.userId] = 1;
-      } else {
-        userCompleted[todo.userId]++;
+  } else {
+    const todos = JSON.parse(body);
+    todos.forEach(todo => {
+      if (todo.completed === true) {
+        if (userCompleted[todo.userId] === undefined) {
+          userCompleted[todo.userId] = 1;
+        } else {
+          userCompleted[todo.userId] += 1;
+        }
       }
-    }
-  });
-  console.log(userCompleted);
+    });
+    console.log(userCompleted);
+  }
 });
